@@ -1,23 +1,80 @@
 aid: arenacx
+
 name: ArenaCX
-description: 'ArenaCX is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_17w25n1ap09a6vm00w7aawddys/21810b8184a35d5099115a4f17058031_1790365819996.png
+
+description: ArenaCX provides a managed network for customer operations sourcing, offering BPO sourcing, multi‑vendor management, seasonal surge
+  handling, and critical response services. The platform connects enterprises with specialized providers, leveraging decades of operating experience
+  to deliver diversified solutions across public‑sector and private markets. ArenaCX’s portal enables providers to join a selective network, facilitating
+  collaboration and opportunity matching for complex customer‑operations challenges.
+
 url: https://raw.githubusercontent.com/api-evangelist/arenacx/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+- BPO
+- Customer Operations
+- Platform
+- Managed Services
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/arenacx-hosts.yml
+- type: Vendors
+  url: vendors/arenacx-vendors.yml
+- type: Blog
+  url: https://blog.arenacx.com/home
+- type: Documentation
+  url: https://help.arenacx.com/
+- type: GitHubOrganization
+  url: https://github.com/arenacx
+- type: DomainSecurity
+  url: security/arenacx-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://arenacx.com/
+- type: PrivacyPolicy
+  url: https://arenacx.com/privacy
+- type: TermsOfService
+  url: https://arenacx.com/terms-conditions
+
+apis:
+- name: ArenaCX API
+  description: API for ArenaCX platform providing BPO sourcing and multi‑vendor management operations.
+  humanURL: https://arenacx.com/solutions
+  baseURL: null
+  aid: arenacx:arenacx-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Help center pages render via JavaScript, preventing automated spec discovery.
+  evidence:
+  - url: https://help.arenacx.com/auth/v3/signin?brand_id=360003234453&locale=en-us&return_to=https%3A%2F%2Fhelp.arenacx.com%2Fhc&role=end_user
+    status: 200
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

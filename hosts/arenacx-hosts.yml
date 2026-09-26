@@ -1,0 +1,124 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 9
+  own: 8
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - docs
+  - marketing
+  - other
+  - source
+  - website
+hosts:
+- host: api.arenacx.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: arenacx.com
+  role: api
+  relation: own
+- host: app.arenacx.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: arenacx.com
+  role: other
+  relation: own
+- host: arenacx.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  - PrivacyPolicy
+  - TermsOfService
+  serves:
+  - docs
+  registrable_domain: arenacx.com
+  role: website
+  relation: own
+- host: blog.arenacx.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Blog
+  serves: []
+  registrable_domain: arenacx.com
+  role: marketing
+  relation: own
+- host: channel.arenacx.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: arenacx.com
+  role: other
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: help.arenacx.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - well-known
+  - vendor-detect
+  types:
+  - Documentation
+  serves:
+  - docs
+  - cdn
+  - support
+  vendor: cloudflare
+  registrable_domain: arenacx.com
+  role: docs
+  relation: own
+- host: platform.arenacx.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: arenacx.com
+  role: other
+  relation: own
+- host: providers.arenacx.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: arenacx.com
+  role: other
+  relation: own
